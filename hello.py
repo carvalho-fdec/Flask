@@ -19,7 +19,10 @@ def user(name):
 def hello_name(name):
     return render_template('template1.html', name=name.upper())
 
-
+@app.route('/hi/<name>')
+def hi_name(name):
+    return render_template('template2.html', name=name.upper())
+    
 
 if "__main__" == __name__:
     app.run(debug=True) 
